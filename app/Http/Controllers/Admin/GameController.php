@@ -10,6 +10,6 @@ class GameController extends Controller
     // 以下を追記
     public function add()
     {
-        return('admin.game.create');
+        return view('admin.game.create');
     }
 }
