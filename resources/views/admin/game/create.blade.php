@@ -2,7 +2,7 @@
 @extends('layouts.admin')
 
 
-@section('title', 'ニュースの新規作成')
+@section('title', 'ゲームの新規作成')
 
 @section('content')
     <div class="container">
