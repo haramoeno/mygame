@@ -21,6 +21,7 @@ Route::get('/', function () {
 use App\Http\Controllers\Admin\GameController;
 Route::controller(GameController::class)->prefix('admin')->group(function () {
     Route::get('game/create', 'add')->middleware('auth');
+    Route::get('game/top', 'top')->middleware('auth');
 });
 Auth::routes();
 
