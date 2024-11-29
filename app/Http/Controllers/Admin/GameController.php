@@ -13,6 +13,11 @@ class GameController extends Controller
         return view('admin.game.create');
     }
     
+    public function search(Request $request)
+    {
+        return view('admin/game/search');
+    }
+    
     public function top(Request $request)
     {
         return view('admin/game/top');
