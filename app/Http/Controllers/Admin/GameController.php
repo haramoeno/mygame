@@ -13,9 +13,9 @@ class GameController extends Controller
         return view('admin.game.create');
     }
     
-    public function search(Request $request)
+    public function results(Request $request)
     {
-        return view('admin/game/search');
+        return view('admin/game/results');
     }
     
     public function top(Request $request)

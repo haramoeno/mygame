@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>search</title>
+        <title>results</title>
     </head>
     <body>
-        <h1>search画面</h1>
+        <h1>results画面</h1>
     </body>
 </html>
