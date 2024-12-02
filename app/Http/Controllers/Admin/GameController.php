@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class GameController extends Controller
 {
     // 以下を追記
-    public function add()
+    public function search()
     {
-        return view('admin.game.create');
+        return view('admin.game.search');
     }
     
     public function results(Request $request)
@@ -21,5 +21,10 @@ class GameController extends Controller
     public function top(Request $request)
     {
         return view('admin/game/top');
+    }
+    
+    public function register(Request $request)
+    {
+        return view('admin/game/register');
     }
 }

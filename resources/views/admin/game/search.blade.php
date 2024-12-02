@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ゲーム新規作成</h2>
+                <h2>ゲーム検索画面</h2>
             </div>
         </div>
     </div>
