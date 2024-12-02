@@ -27,4 +27,9 @@ class GameController extends Controller
     {
         return view('admin/game/register');
     }
+    
+    public function details(Request $request)
+    {
+        return view('admin/game/details');
+    }
 }

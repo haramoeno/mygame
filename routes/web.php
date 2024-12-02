@@ -24,6 +24,7 @@ Route::controller(GameController::class)->prefix('admin')->group(function () {
     Route::get('game/top', 'top')->middleware('auth');
     Route::get('game/results', 'results')->middleware('auth');
     Route::get('game/register', 'register')->middleware('auth');
+    Route::get('game/details', 'details')->middleware('auth');
 });
 Auth::routes();
 
