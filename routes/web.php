@@ -23,7 +23,7 @@ Route::controller(GameController::class)->prefix('admin')->name('admin')->middle
     Route::get('game/search', 'search')->middleware('auth');
     Route::get('game/top', 'top')->name('game.top');
     Route::get('game/results', 'results')->middleware('auth');
-    Route::get('game/register', 'register')->middleware('auth');
+    Route::get('game/register', 'register')->name('game.register');
     Route::get('game/details', 'details')->middleware('auth');
 });
 Auth::routes();

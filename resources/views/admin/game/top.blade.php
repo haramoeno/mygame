@@ -9,8 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                {{--<a href="{{ route('admin.game.top') }}" role="button" class="btn btn-primary">新規登録</a> --}}
-                <a href="#" class="button">新規登録</a><br>
+                <a href="{{ route('game.register') }}" role="button" class="btn btn-primary">新規登録</a>
                 <a href="#" class="button">ログイン</a>
             </div>
         </div>
