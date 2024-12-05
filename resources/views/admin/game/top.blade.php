@@ -8,9 +8,10 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h2>新規登録</h2>
-                <h2>ログイン</h2>
+            <div class="col-md-4">
+                {{--<a href="{{ route('admin.game.top') }}" role="button" class="btn btn-primary">新規登録</a> --}}
+                <a href="#" class="button">新規登録</a><br>
+                <a href="#" class="button">ログイン</a>
             </div>
         </div>
     </div>

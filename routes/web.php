@@ -19,9 +19,9 @@ Route::get('/', function () {
 
 
 use App\Http\Controllers\Admin\GameController;
-Route::controller(GameController::class)->prefix('admin')->group(function () {
+Route::controller(GameController::class)->prefix('admin')->name('admin')->middleware('auth')->group(function () {
     Route::get('game/search', 'search')->middleware('auth');
-    Route::get('game/top', 'top')->middleware('auth');
+    Route::get('game/top', 'top')->name('game.top');
     Route::get('game/results', 'results')->middleware('auth');
     Route::get('game/register', 'register')->middleware('auth');
     Route::get('game/details', 'details')->middleware('auth');

@@ -20,12 +20,12 @@ class GameController extends Controller
     
     public function top(Request $request)
     {
-        return view('admin/game/top');
+        return view('admin.game.top');
     }
     
     public function register(Request $request)
     {
-        return view('admin/game/register');
+        return view('admin.game.register');
     }
     
     public function details(Request $request)
