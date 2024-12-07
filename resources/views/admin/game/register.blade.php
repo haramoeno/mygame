@@ -9,7 +9,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>新規登録画面</h2>
+                <form action="" method="post">
+                    
+                </form>
                 
             </div>
         </div>
