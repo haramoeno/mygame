@@ -19,12 +19,12 @@ Route::get('/', function () {
 
 
 use App\Http\Controllers\Admin\GameController;
-Route::controller(GameController::class)->prefix('admin')->name('admin')->middleware('auth')->group(function () {
-    Route::get('game/search', 'search')->middleware('auth');
-    Route::get('game/top', 'top')->name('game.top');
-    Route::get('game/results', 'results')->middleware('auth');
-    Route::get('game/register', 'register')->name('game.register');
-    Route::get('game/details', 'details')->middleware('auth');
+Route::controller(GameController::class)->prefix('admin/game')->name('admin.game.')->group(function () {
+    Route::get('search', 'search')->middleware('auth')->name('search');
+    Route::get('top', 'top')->name('top');// ユーザ認証（ログイン）しなくても表示したい
+    Route::get('results', 'results')->middleware('auth')->name('results');
+    // Route::get('register', 'register')->name('register');
+    Route::get('details', 'details')->middleware('auth')->name('details');
 });
 Auth::routes();
 
