@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 
-use App\Http\Controllers\Admin\GameController;
-Route::controller(GameController::class)->prefix('admin/game')->name('admin.game.')->group(function () {
+use App\Http\Controllers\GameController;
+Route::controller(GameController::class)->prefix('game')->name('game.')->group(function () {
     Route::get('search', 'search')->middleware('auth')->name('search');
     Route::get('top', 'top')->name('top');// ユーザ認証（ログイン）しなくても表示したい
     Route::get('results', 'results')->middleware('auth')->name('results');
     // Route::get('register', 'register')->name('register');
-    Route::get('details', 'details')->middleware('auth')->name('details');
+    Route::get('detail', 'detail')->middleware('auth')->name('details');
 });
 Auth::routes();
 
