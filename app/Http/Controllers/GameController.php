@@ -30,6 +30,6 @@ class GameController extends Controller
     
     public function detail(Request $request)
     {
-        return view('game/detail');
+        return view('game.detail');
     }
 }
