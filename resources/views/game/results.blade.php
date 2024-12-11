@@ -2,13 +2,17 @@
 @extends('layouts.admin')
 
 
-@section('title', 'ゲームの新規作成')
+@section('title', 'ゲームの検索結果画面')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>検索画面表示画面</h2>
+            <h2>検索結果</h2>
+            <form action="{{ route('game.search') }}" method="get">
+                
+            </form>
+            
             </div>
         </div>
     </div>

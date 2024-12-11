@@ -11,6 +11,14 @@
                 <form action="" method="get">
                 <input type="search" name="freeword" placeholder="フリーワードを入力">
                 
+                @if (count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all()  as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+                
                 <p>ジャンル</p>
                 <select name="genre">
                     <option value="" disabled>選択してください</option>
@@ -23,8 +31,8 @@
                 <p>プラットフォーム</p>
                 <select name="platform">
                     <option value="" disabled>選択してください</option>
-                    <option value="pc5">pc5<ption>
-                    <option value="pc4">pc4</option>
+                    <option value="PS5">PS5<ption>
+                    <option value="PS4">PS4</option>
                     <option value="Switch">Switch</option>
                     <option value="pc">pc</option>
                     <option value="アプリ">アプリ</option>
