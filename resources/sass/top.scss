@@ -1,4 +1,33 @@
+.image {
+    position: relative;
+    
+}
+
 .login {
-    width: 400px;
-    height: 500px;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    border: 5px solid #FFF;
+    background-color: black;
+    color: white;
+    font-size: 3em;
+}
+
+.register {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    border: 5px solid #FFF;
+    background-color: black;
+    color: white;
+    font-size: 3em;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+.head, body {
+    overflow: hidden;
 }
