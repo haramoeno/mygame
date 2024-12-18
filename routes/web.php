@@ -25,6 +25,8 @@ Route::controller(GameController::class)->prefix('game')->name('game.')->group(f
     Route::get('results', 'results')->middleware('auth')->name('results');
     // Route::get('register', 'register')->name('register');
     Route::get('detail', 'detail')->middleware('auth')->name('details');
+    Route::get('create', 'create')->middleware('auth')->name('create');
+    Route::post('create', 'create')->middleware('auth')->name('create');
 });
 Auth::routes();
 

@@ -16,7 +16,6 @@ class Game extends Model
         'title' => 'required',
         'genre' => 'required',
         'platform' => 'required',
-        'playstyle' => 'playstle',
-        'intro' => 'intro',
+        'playstyle' => 'required',
         );
 }

@@ -34,4 +34,22 @@ class GameController extends Controller
     {
         return view('game.detail');
     }
+    
+    public function create(Request $request)
+    {
+        
+        $this->validate($request, Game::$rules);
+        
+        $game = new Game;
+        $form = $request->all();
+        
+        
+        unset($form['_token']);
+        
+        $game->fill($form);
+        $game->save();
+        
+        
+        return view('game.create');
+    }
 }
