@@ -38,18 +38,18 @@ class GameController extends Controller
     public function create(Request $request)
     {
         
-        $this->validate($request, Game::$rules);
+        //$this->validate($request, Game::$rules);
         
-        $game = new Game;
-        $form = $request->all();
-        
-        
-        unset($form['_token']);
-        
-        $game->fill($form);
-        $game->save();
+        //$game = new Game;
+        //$form = $request->all();
         
         
+        //unset($form['_token']);
+        
+        //$game->fill($form);
+        //$game->save();
+        
+    
         return view('game.create');
     }
 }
