@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <form action="" method="get">
+                <form action="{{ route('game.create') }}" method="get">
                 <input type="search" name="freeword" placeholder="フリーワードを入力">
                 
                 @if (count($errors) > 0)
