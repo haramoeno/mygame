@@ -80,4 +80,18 @@ class GameController extends Controller
     {
         return view('game.create');
     }
-}
+    
+    
+    public function index(Request $request)
+    {
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            
+            $posts = Game::where('title', 'LIKE', "%{cond_title}%")->get();
+        } else {
+            
+            $posts = Game::all();
+        }
+        return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        }
+    }

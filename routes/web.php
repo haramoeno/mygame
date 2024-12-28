@@ -28,6 +28,7 @@ Route::controller(GameController::class)->prefix('game')->name('game.')->group(f
     // 情報登録機能については、しっかりと見直しておく
     Route::get('create', 'add')->middleware('auth')->name('add');
     Route::post('create', 'create')->middleware('auth')->name('create');
+    Route::get('', 'index')->name('index');
 });
 Auth::routes();
 

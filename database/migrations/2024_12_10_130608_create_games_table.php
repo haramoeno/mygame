@@ -17,10 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('genre');
-            $table->string('platform');
             $table->string('playstyle');
-            $table->string('image_path')->nullable();
-            $table->string('intro');
+            $table->string('platform');
             $table->timestamps();
         });
     }
