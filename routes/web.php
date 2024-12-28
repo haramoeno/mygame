@@ -29,6 +29,8 @@ Route::controller(GameController::class)->prefix('game')->name('game.')->group(f
     Route::get('create', 'add')->middleware('auth')->name('add');
     Route::post('create', 'create')->middleware('auth')->name('create');
     Route::get('', 'index')->name('index');
+    Route::get('edit', 'edit')->name('edit');
+    Route::post('edit', 'update')->name('update');
 });
 Auth::routes();
 

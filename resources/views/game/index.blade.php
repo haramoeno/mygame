@@ -40,13 +40,18 @@
                             </thead>
                             <tbody>
                                 @foreach($posts as $game)
-                                <tr>
-                                    <th>{{ $game->id }}</th>
-                                    <td>{{ Str::limit($game->title, 100) }}</td>
-                                    <td>{{ Str::limit($game->genre, 100) }}</td>
-                                    <td>{{ Str::limit($game->playstyle, 100) }}</td>
-                                    <td>{{ Str::limit($game->platform, 100) }}</td>
-                                </tr>
+                                    <tr>
+                                        <th>{{ $game->id }}</th>
+                                        <td>{{ Str::limit($game->title, 100) }}</td>
+                                        <td>{{ Str::limit($game->genre, 100) }}</td>
+                                        <td>{{ Str::limit($game->playstyle, 100) }}</td>
+                                        <td>{{ Str::limit($game->platform, 100) }}</td>
+                                        <td>
+                                            <div>
+                                                <a href="{{ route('game.edit', ['id' => $game->id]) }}">編集</a>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>

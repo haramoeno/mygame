@@ -94,4 +94,28 @@ class GameController extends Controller
         }
         return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title]);
         }
+        
+    public function edit(Request $request)
+    {
+        $game = Game::find($request->id);
+        if (empty($game)) {
+            abort(404);
+        }
+        return view('game.edit', ['game_form' => $game]);
+    }
+    
+    public function update(Request $request)
+    {
+        $this->validate($request, Game::$rules);
+        
+        $game = Game::find($request->id);
+        
+        $game_form = $request->all();
+        unset($game_form['_token']);
+        
+        $game->fill($game_form)->save();
+        
+        return redirect('game');
+    }
+    
     }
