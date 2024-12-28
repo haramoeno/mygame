@@ -50,6 +50,9 @@
                                             <div>
                                                 <a href="{{ route('game.edit', ['id' => $game->id]) }}">編集</a>
                                             </div>
+                                            <div>
+                                                <a href="{{ route('game.delete', ['id' => $game->id]) }}">削除</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
