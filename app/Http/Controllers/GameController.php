@@ -92,6 +92,15 @@ class GameController extends Controller
             
             $posts = Game::all();
         }
+        
+        $cond_genre = $request->cond_genre;
+        if ($cond_genre != '') {
+            
+            $posts = Game::where('genre', 'LIKE', "%{cond_genre}%")->get();
+        } else {
+            
+            $posts = Game::all();
+        }
         return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title]);
         }
         

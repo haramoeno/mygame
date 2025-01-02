@@ -17,6 +17,12 @@
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_title" value="{{ $cond_title }}">
                             </div>
+                        <div class="form-group row">
+                            <label class="col-md-2">ジャンル</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-action" name="cond_genre" value="{{ $cond_genre }}">
+                            </div>
+                            
                              <div class="col-md-2">
                                 @csrf
                                 <input type="submit" class="btn btn-primary" value="検索">
@@ -36,6 +42,7 @@
                                     <th width="20%">ジャンル</th>
                                     <th width="20%">プレイスタイル</th>
                                     <th width="20%">プラットフォーム</th>
+                                    <th width="20%">修正</th>
                                 </tr>
                             </thead>
                             <tbody>
