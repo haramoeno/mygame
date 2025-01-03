@@ -84,25 +84,58 @@ class GameController extends Controller
     
     public function index(Request $request)
     {
+        $query = Game::query();
+        // $query = Game::where('id', '!=', 0);
+
+        // cond_title
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
+            // タイトルに指定があった場合
             
-            $posts = Game::where('title', 'LIKE', "%{cond_title}%")->get();
-        } else {
-            
-            $posts = Game::all();
+            $query->where('title', 'LIKE', "%{$cond_title}%");
         }
-        
+
+        // cond_genre
         $cond_genre = $request->cond_genre;
         if ($cond_genre != '') {
+            // ジャンルに指定があった場合
             
-            $posts = Game::where('genre', 'LIKE', "%{cond_genre}%")->get();
-        } else {
+            $query->where('genre', 'LIKE', "%{$cond_genre}%");
+        }
+
+        $posts = $query->get();
+        // if ($cond_title != '' && $cond_genre != '') {
+        //     // タイトルもジャンルも指定があった場合
+        //     $posts = Game::where(
+        //         'title', 'LIKE', "%{$cond_title}%"
+        //     )->where(
+        //         'genre', 'LIKE', "%{$cond_genre}%"
+        //     )->get();
+        // } elseif ($cond_title != '') {
+        //     // タイトルに指定があった場合
             
-            $posts = Game::all();
-        }
-        return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title]);
-        }
+        //     $posts = Game::where('title', 'LIKE', "%{$cond_title}%")->get();
+        // } elseif ($cond_genre != '') {
+        //     // ジャンルに指定があった場合
+            
+        //     $posts = Game::where('genre', 'LIKE', "%{$cond_genre}%")->get();
+        // } else {
+            
+        //     $posts = Game::all();
+        // }
+        return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title, 'cond_genre' => $cond_genre]);
+        
+        
+        // $cond_genre = $request->cond_genre;
+        // if ($cond_genre != '') {
+            
+        //     $posts = Game::where('genre', 'LIKE', "%{cond_genre}%")->get();
+        // } else {
+            
+        //     $posts = Game::all();
+        // } 
+        // return view('game.index', ['posts' => $posts, 'cond_genre' => $cond_genre]);
+    }
         
     public function edit(Request $request)
     {
