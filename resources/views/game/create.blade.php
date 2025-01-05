@@ -16,31 +16,34 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">ゲームタイトル</label>
-                        <div class="col-md-10">
+                        <label class="col-md-4">ゲームタイトル</label>
+                        <div class="col-md-4">
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">ジャンル</label>
-                        <div class="col-md-10">
+                        <label class="col-md-4">ジャンル</label>
+                        <div class="col-md-4">
                             <input type="text" class="form-control" name="genre" value="{{ old('genre') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">プレイスタイル</label>
-                        <div class="col-md-10">
+                        <label class="col-md-4">プレイスタイル</label>
+                        <div class="col-md-4">
                             <input type="text" class="form-control" name="playstyle" value="{{ old('playstyle') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">プラットフォーム</label>
-                        <div class="col-md-10">
+                        <label class="col-md-4">プラットフォーム</label>
+                        <div class="col-md-4">
                             <input type="text" class="form-control" name="platform" value="{{ old('platform') }}">
                         </div>
                     </div>
                     @csrf
-                    <input type="submit" class="btn btn-primary" value="登録">
+                    <div class="form-group row">
+                            <input type="submit" class="btn btn-primary" value="登録">
+                    </div>
+                    
                 </form>
             </div>
         </div>

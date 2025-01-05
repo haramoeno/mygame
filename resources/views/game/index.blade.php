@@ -10,7 +10,7 @@
                 <div class="col-md-4">
                     <a href="{{ route('game.add') }}" role="button" class="btn btn-primary">新規作成</a> 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <form action="{{ route('game.index') }}" method="get">
                         <div class="form-group row">
                             <label class="col-md-2">タイトル</label>
@@ -22,6 +22,17 @@
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_genre" value="{{ $cond_genre }}">
                             </div>
+                        <div class="form-group row">
+                            <label class="col-md-2">プレイスタイル</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-action" name="cond_playstyle" value="{{ $cond_playstyle }}">
+                            </div>
+                        <div class="form-group row">
+                            <label class="col-md-2">プラットフォーム</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-action" name="cond_platform" value="{{ $cond_platform }}">
+                            </div>
+                            
                             
                              <div class="col-md-2">
                                 @csrf

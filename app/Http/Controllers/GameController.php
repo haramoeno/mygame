@@ -102,6 +102,18 @@ class GameController extends Controller
             
             $query->where('genre', 'LIKE', "%{$cond_genre}%");
         }
+        
+        $cond_playstyle = $request->cond_playstyle;
+         if ($cond_playstyle != '') {
+             
+             $query->where('playstyle', 'LIKE', "%{$cond_playstyle}%");
+        }
+        
+        $cond_platform = $request->cond_platform;
+        if ($cond_platform != '') {
+            
+            $query->where('platform', 'LIKE', "%{$cond_platform}%");
+        }
 
         $posts = $query->get();
         // if ($cond_title != '' && $cond_genre != '') {
@@ -123,7 +135,9 @@ class GameController extends Controller
             
         //     $posts = Game::all();
         // }
-        return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title, 'cond_genre' => $cond_genre]);
+        return view('game.index', ['posts' => $posts, 'cond_title' => $cond_title, 
+                                   'cond_genre' => $cond_genre, 'cond_playstyle' => $cond_playstyle,
+                                   'cond_platform' => $cond_platform]);
         
         
         // $cond_genre = $request->cond_genre;
