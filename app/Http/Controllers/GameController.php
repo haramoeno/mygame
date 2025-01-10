@@ -48,7 +48,11 @@ class GameController extends Controller
      */
     public function detail(Request $request)
     {
-        return view('game.detail');
+        $game = Game::find($request->id);
+        if (empty($game)) {
+            abort(404);
+        }
+        return view('game.detail', ['game_form' => $game]);
     }
     
     /**
