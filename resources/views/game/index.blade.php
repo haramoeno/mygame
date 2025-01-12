@@ -14,36 +14,38 @@
 
                     <form action="{{ route('game.index') }}" method="get">
                         <div class="form-group row">
-                            <label class="col-md-2">タイトル</label>
+                            <label class="col-md-4">タイトル</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_title" value="{{ $cond_title }}">
                             </div>
                         </div>
                     
                         <div class="form-group row">
-                            <label class="col-md-2">ジャンル</label>
+                            <label class="col-md-4">ジャンル</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_genre" value="{{ $cond_genre }}">
                             </div>
                         </div>
                     
                         <div class="form-group row">
-                            <label class="col-md-2">プレイスタイル</label>
+                            <label class="col-md-4">プレイスタイル</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_playstyle" value="{{ $cond_playstyle }}">
                             </div>
                         </div>
                     
                         <div class="form-group row">
-                            <label class="col-md-2">プラットフォーム</label>
+                            <label class="col-md-4">プラットフォーム</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-action" name="cond_platform" value="{{ $cond_platform }}">
                             </div>
                         </div>
                     
-                        <div class="col-md-2">
+                        <div class="col-md-12">
                             @csrf
+                            <div style="text-align: right">
                             <input type="submit" class="btn btn-primary" value="検索">
+                            </div>
                         </div>
                     </form>
 
