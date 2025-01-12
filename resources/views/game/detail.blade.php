@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 @section('title', 'ゲームの詳細画面')
 
+<head>
+<link href="{{ secure_asset('css/detail.css') }}" rel="stylesheet">
+</head>
+
 @section('content')
     <div class="container">
         <div class="row">
